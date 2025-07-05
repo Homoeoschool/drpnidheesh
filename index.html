@@ -138,10 +138,11 @@
             <!-- About Dr. Nidheesh -->
             <div class="mt-32 grid md:grid-cols-2 gap-16 items-center fade-in">
                 <div class="floating">
-                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
-                        <div class="w-72 h-72 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full flex items-center justify-center">
-                            <span class="text-6xl">👨‍⚕️</span>
-                        </div>
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR ACTUAL PHOTO -->
+                    <div class="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl">
+                        <img src="https://via.placeholder.com/320x320/4F46E5/FFFFFF?text=Dr.+Nidheesh" 
+                             alt="Dr. Nidheesh - Quantum Healing Expert" 
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div>
@@ -222,11 +223,11 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in">
                     <div class="relative">
-                        <div class="w-full h-96 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-3xl flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-8xl mb-4 floating">⚡</div>
-                                <div class="text-2xl text-blue-900 font-light">Energy Transformation</div>
-                            </div>
+                        <!-- REPLACE WITH HEW THERAPY IMAGE -->
+                        <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://via.placeholder.com/600x400/8B5CF6/FFFFFF?text=HEW+Therapy+Session" 
+                                 alt="HEW Therapy Energy Healing Session" 
+                                 class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 floating"></div>
                         <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-200 rounded-full opacity-50 floating" style="animation-delay: 2s;"></div>
@@ -447,11 +448,11 @@
                 
                 <div class="fade-in">
                     <div class="relative">
-                        <div class="w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-8xl mb-4 floating">🌌</div>
-                                <div class="text-2xl font-light">Infinite Possibilities</div>
-                            </div>
+                        <!-- REPLACE WITH QUANTUM HEALING IMAGE -->
+                        <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://via.placeholder.com/600x400/6366F1/FFFFFF?text=Quantum+Healing+Energy" 
+                                 alt="Quantum Healing Energy Field" 
+                                 class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -524,31 +525,32 @@
             
             <div class="grid lg:grid-cols-2 gap-16">
                 <div class="fade-in">
-                    <form class="space-y-6" onsubmit="submitContactForm(event)">
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <input type="text" name="first-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <input type="text" name="last-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                                 <option>Select a service</option>
                                 <option>HEW Therapy</option>
                                 <option>Homeopathic Consultation</option>
@@ -561,7 +563,7 @@
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing journey and what you'd like to achieve..."></textarea>
+                            <textarea rows="4" name="message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing journey and what you'd like to achieve..."></textarea>
                         </div>
                         
                         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105">
@@ -685,30 +687,32 @@
             
             <h3 id="modal-title" class="text-2xl font-bold text-blue-900 mb-6">Book Your Session</h3>
             
-            <form onsubmit="submitBooking(event)" class="space-y-4">
+            <form name="booking" method="POST" data-netlify="true" class="space-y-4">
+                <input type="hidden" name="form-name" value="booking" />
+                <input type="hidden" name="service-type" id="service-type" value="" />
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                    <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <input type="text" name="full-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
-                    <input type="date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <input type="date" name="preferred-date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 </div>
                 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing goals..."></textarea>
+                    <textarea rows="3" name="message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing goals..."></textarea>
                 </div>
                 
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors">
@@ -735,6 +739,7 @@
         // Booking modal functions
         function openBookingModal(service) {
             document.getElementById('modal-title').textContent = `Book ${service}`;
+            document.getElementById('service-type').value = service;
             document.getElementById('booking-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
@@ -744,19 +749,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Form submissions (Demo functionality)
-        function submitContactForm(event) {
-            event.preventDefault();
-            alert('Thank you for your message! Dr. Nidheesh will connect with you within 24 hours to begin your healing journey.');
-            event.target.reset();
-        }
-
-        function submitBooking(event) {
-            event.preventDefault();
-            alert('Your session has been requested! You will receive a confirmation email with payment details and session information within 2 hours.');
-            closeBookingModal();
-            event.target.reset();
-        }
+        // Form submissions now handled by Netlify Forms automatically
 
         // Fade in animation on scroll
         const observerOptions = {
@@ -801,5 +794,21 @@
         // Auto-scroll testimonials every 5 seconds
         setInterval(autoScrollTestimonials, 5000);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95a658e480daff66',t:'MTc1MTcxMzEwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95a66f7963aaff66',t:'MTc1MTcxNDAzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
+<img src="https://via.placeholder.com/320x320/4F46E5/FFFFFF?text=Dr.+Nidheesh" 
+     alt="Dr. Nidheesh - Quantum Healing Expert" 
+     class="w-full h-full object-cover">
+
+<img src="https://via.placeholder.com/600x400/8B5CF6/FFFFFF?text=HEW+Therapy+Session" 
+     alt="HEW Therapy Energy Healing Session" 
+     class="w-full h-full object-cover">
+
+<img src="https://via.placeholder.com/600x400/6366F1/FFFFFF?text=Quantum+Healing+Energy" 
+     alt="Quantum Healing Energy Field" 
+     class="w-full h-full object-cover">
+
+<img src="https://your-photo-url-here.jpg" 
+     alt="Dr. Nidheesh" 
+     class="w-full h-full object-cover">
