@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nidheesh - Quantum Healing & Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%);
+        }
+        
+        .quantum-bg {
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .testimonial-slider {
+            scroll-behavior: smooth;
+        }
+        
+        .energy-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(56, 189, 248, 0.6);
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+            25% { transform: translateY(-30px) translateX(10px); opacity: 1; }
+            50% { transform: translateY(-60px) translateX(-10px); opacity: 0.7; }
+            75% { transform: translateY(-30px) translateX(15px); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-900">Dr. Nidheesh</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#hew-therapy" class="text-gray-700 hover:text-blue-600 transition-colors">HEW Therapy</a>
+                    <a href="#consultation" class="text-gray-700 hover:text-blue-600 transition-colors">Consultation</a>
+                    <a href="#learn" class="text-gray-700 hover:text-blue-600 transition-colors">Learn</a>
+                    <a href="#quantum" class="text-gray-700 hover:text-blue-600 transition-colors">Quantum Healing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-blue-100">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700">Home</a>
+                <a href="#hew-therapy" class="block py-2 text-gray-700">HEW Therapy</a>
+                <a href="#consultation" class="block py-2 text-gray-700">Consultation</a>
+                <a href="#learn" class="block py-2 text-gray-700">Learn</a>
+                <a href="#quantum" class="block py-2 text-gray-700">Quantum Healing</a>
+                <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen gradient-bg quantum-bg relative overflow-hidden">
+        <!-- Energy Particles -->
+        <div class="energy-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="energy-particle" style="top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="energy-particle" style="top: 40%; left: 60%; animation-delay: 4s;"></div>
+        <div class="energy-particle" style="top: 80%; left: 30%; animation-delay: 6s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-7xl font-light text-blue-900 mb-6 leading-tight">
+                    Awaken Healing.<br>
+                    <span class="text-blue-600">Empower Your Life.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
+                    Transform your reality through quantum consciousness, holistic healing, and the infinite potential within you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button onclick="scrollToSection('contact')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                        Book Your Session
+                    </button>
+                    <button onclick="scrollToSection('quantum')" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300">
+                        Explore Healing
+                    </button>
+                </div>
+            </div>
+            
+            <!-- About Dr. Nidheesh -->
+            <div class="mt-32 grid md:grid-cols-2 gap-16 items-center fade-in">
+                <div class="floating">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+                        <div class="w-72 h-72 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full flex items-center justify-center">
+                            <span class="text-6xl">👨‍⚕️</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-light text-blue-900 mb-6">Meet Dr. Nidheesh</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        A visionary healer bridging ancient wisdom with quantum science. With over a decade of experience in holistic medicine, Dr. Nidheesh guides souls toward their highest potential through transformative healing modalities.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        His unique approach combines the precision of homeopathy with the limitless possibilities of quantum consciousness, creating profound shifts in health, relationships, and life purpose.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm">Quantum Healing</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm">Homeopathy</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm">Life Coaching</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Cards -->
+            <div class="mt-32">
+                <h2 class="text-4xl font-light text-center text-blue-900 mb-16 fade-in">Healing Modalities</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-hover bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 fade-in cursor-pointer" onclick="scrollToSection('hew-therapy')">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="text-2xl text-white">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-blue-900 mb-4">HEW Therapy</h3>
+                        <p class="text-gray-600 leading-relaxed">Revolutionary energy healing that transforms your cellular memory and activates your body's natural healing intelligence.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 fade-in cursor-pointer" onclick="scrollToSection('consultation')">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="text-2xl text-white">🌿</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-blue-900 mb-4">Homeopathic Consultation</h3>
+                        <p class="text-gray-600 leading-relaxed">Personalized homeopathic treatment that addresses the root cause of illness and restores natural balance.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 fade-in cursor-pointer" onclick="scrollToSection('quantum')">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="text-2xl text-white">🌌</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-blue-900 mb-4">Quantum Healing</h3>
+                        <p class="text-gray-600 leading-relaxed">Access the quantum field of infinite possibilities to create miraculous healing and life transformation.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 fade-in cursor-pointer" onclick="scrollToSection('learn')">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="text-2xl text-white">🎯</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-blue-900 mb-4">1-1 Coaching</h3>
+                        <p class="text-gray-600 leading-relaxed">Personalized guidance to unlock your potential and create the life you've always dreamed of living.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 fade-in cursor-pointer" onclick="window.open('https://homoeoschool.in', '_blank')">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="text-2xl text-white">🎓</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-blue-900 mb-4">Homoeopath Coaching</h3>
+                        <p class="text-gray-600 leading-relaxed">Advanced training for homeopaths to elevate their practice and create profound healing results.</p>
+                        <div class="mt-4 text-blue-600 text-sm font-medium">Visit Homoeoschool.in →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEW Therapy Section -->
+    <section id="hew-therapy" class="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-light text-blue-900 mb-6">HEW Therapy</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Holistic Energy Wellness - A revolutionary approach that harmonizes your energy field, releasing blockages and activating your body's innate healing wisdom.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-3xl flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-8xl mb-4 floating">⚡</div>
+                                <div class="text-2xl text-blue-900 font-light">Energy Transformation</div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 floating"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-200 rounded-full opacity-50 floating" style="animation-delay: 2s;"></div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-3xl font-light text-blue-900 mb-8">Benefits of HEW Therapy</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-blue-900 mb-2">Cellular Regeneration</h4>
+                                <p class="text-gray-600">Activate your body's natural healing mechanisms at the cellular level</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-blue-900 mb-2">Emotional Release</h4>
+                                <p class="text-gray-600">Clear trapped emotions and limiting beliefs from your energy field</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-blue-900 mb-2">Vitality Restoration</h4>
+                                <p class="text-gray-600">Experience renewed energy, clarity, and zest for life</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-blue-900 mb-2">Spiritual Alignment</h4>
+                                <p class="text-gray-600">Connect with your higher self and life purpose</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <button onclick="openBookingModal('HEW Therapy')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            Book HEW Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homeopathic Consultation Section -->
+    <section id="consultation" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-light text-blue-900 mb-6">Homeopathic Consultation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Where science meets soul. Experience the profound healing power of classical homeopathy, tailored to your unique constitution and life story.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl text-white">🔍</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Deep Assessment</h3>
+                    <p class="text-gray-600">Comprehensive evaluation of your physical, mental, and emotional patterns to identify the root cause of imbalance.</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl text-white">💊</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Personalized Remedy</h3>
+                    <p class="text-gray-600">Carefully selected homeopathic medicines that resonate with your unique energy signature and healing needs.</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl text-white">🌱</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Holistic Healing</h3>
+                    <p class="text-gray-600">Gentle, natural healing that strengthens your vital force and promotes lasting wellness from within.</p>
+                </div>
+            </div>
+            
+            <div class="text-center fade-in">
+                <button onclick="openBookingModal('Homeopathic Consultation')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Book Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn from Dr. Nidheesh Section -->
+    <section id="learn" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-light text-blue-900 mb-6">Learn & Transform</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expand your consciousness and master the art of healing through comprehensive courses and personalized coaching programs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">📚</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Public Courses</h3>
+                    <p class="text-gray-600 mb-6">Open workshops on quantum healing, consciousness expansion, and holistic wellness for everyone seeking transformation.</p>
+                    <button onclick="openBookingModal('Public Course')" class="text-purple-600 hover:text-purple-700 font-medium">Learn More →</button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">💼</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Business Coaching</h3>
+                    <p class="text-gray-600 mb-6">Transform your practice or business with quantum principles, conscious leadership, and aligned success strategies.</p>
+                    <button onclick="openBookingModal('Business Coaching')" class="text-blue-600 hover:text-blue-700 font-medium">Learn More →</button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">🎯</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Skill Development</h3>
+                    <p class="text-gray-600 mb-6">Master advanced healing techniques, intuitive development, and energy work through intensive training programs.</p>
+                    <button onclick="openBookingModal('Skill Development')" class="text-green-600 hover:text-green-700 font-medium">Learn More →</button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">🦋</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Personal Transformation</h3>
+                    <p class="text-gray-600 mb-6">Deep inner work programs to release limitations, heal trauma, and step into your highest potential.</p>
+                    <button onclick="openBookingModal('Personal Transformation')" class="text-pink-600 hover:text-pink-700 font-medium">Learn More →</button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">👥</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">1-1 Coaching</h3>
+                    <p class="text-gray-600 mb-6">Personalized mentorship for profound life transformation, spiritual awakening, and purpose alignment.</p>
+                    <button onclick="openBookingModal('1-1 Coaching')" class="text-orange-600 hover:text-orange-700 font-medium">Learn More →</button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 border border-purple-100 fade-in cursor-pointer" onclick="window.open('https://homoeoschool.in', '_blank')">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl text-white">🎓</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-blue-900 mb-4">Homoeopaths Coaching</h3>
+                    <p class="text-gray-600 mb-6">Advanced training for homeopaths to master the art of healing and build thriving practices.</p>
+                    <div class="text-teal-600 hover:text-teal-700 font-medium">Visit Homoeoschool.in →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantum Healing Section -->
+    <section id="quantum" class="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white relative overflow-hidden">
+        <!-- Quantum Background Effects -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-light mb-6">Quantum Healing</h2>
+                <p class="text-xl max-w-3xl mx-auto opacity-90">
+                    Step into the field of infinite possibilities. Where consciousness meets matter, miracles become natural, and healing transcends the limitations of time and space.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="fade-in">
+                    <h3 class="text-3xl font-light mb-8">The Quantum Field of Healing</h3>
+                    <p class="text-lg opacity-90 mb-6 leading-relaxed">
+                        Quantum healing operates beyond the physical realm, accessing the unified field where all possibilities exist simultaneously. Through focused intention and elevated consciousness, we can collapse the wave function of healing into your reality.
+                    </p>
+                    <p class="text-lg opacity-90 mb-8 leading-relaxed">
+                        This isn't just alternative medicine—it's the future of healing, where science and spirituality converge to create profound transformation at the quantum level of your being.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <span class="text-lg">Instant cellular regeneration</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <span class="text-lg">Timeline healing and trauma release</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                            <span class="text-lg">DNA activation and upgrade</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                            <span class="text-lg">Multidimensional healing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-8xl mb-4 floating">🌌</div>
+                                <div class="text-2xl font-light">Infinite Possibilities</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Slider -->
+            <div class="mb-16 fade-in">
+                <h3 class="text-3xl font-light text-center mb-12">Quantum Transformations</h3>
+                <div class="testimonial-slider overflow-x-auto">
+                    <div class="flex space-x-8 pb-4" style="width: max-content;">
+                        <div class="w-80 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">S</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Sarah M.</div>
+                                    <div class="text-sm opacity-70">Chronic Pain Healing</div>
+                                </div>
+                            </div>
+                            <p class="opacity-90 leading-relaxed">"After years of chronic pain, one quantum healing session with Dr. Nidheesh changed everything. The pain dissolved instantly, and I felt a profound shift in my entire being. It's been 6 months, and I'm still pain-free."</p>
+                        </div>
+                        
+                        <div class="w-80 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">R</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Robert K.</div>
+                                    <div class="text-sm opacity-70">Business Transformation</div>
+                                </div>
+                            </div>
+                            <p class="opacity-90 leading-relaxed">"The quantum healing session didn't just heal my anxiety—it transformed my entire business. Within weeks, opportunities started flowing, and my income tripled. Dr. Nidheesh works with energy in ways I never imagined possible."</p>
+                        </div>
+                        
+                        <div class="w-80 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">M</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Maria L.</div>
+                                    <div class="text-sm opacity-70">Relationship Healing</div>
+                                </div>
+                            </div>
+                            <p class="opacity-90 leading-relaxed">"My marriage was on the brink of divorce. Through quantum healing, we both experienced a profound shift. The love returned stronger than ever, and we now have the relationship we always dreamed of. Miraculous doesn't even begin to describe it."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center fade-in">
+                <button onclick="openBookingModal('Quantum Healing')" class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Experience Quantum Healing
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-light text-blue-900 mb-6">Begin Your Journey</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to transform your life? Connect with Dr. Nidheesh and take the first step toward your highest potential.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="fade-in">
+                    <form class="space-y-6" onsubmit="submitContactForm(event)">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option>Select a service</option>
+                                <option>HEW Therapy</option>
+                                <option>Homeopathic Consultation</option>
+                                <option>Quantum Healing</option>
+                                <option>1-1 Coaching</option>
+                                <option>Business Coaching</option>
+                                <option>Public Courses</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing journey and what you'd like to achieve..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+                        <h3 class="text-2xl font-medium text-blue-900 mb-6">Connect With Us</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-blue-600">📧</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Email</div>
+                                    <div class="text-gray-600">hello@drnidheesh.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-blue-600">📱</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Phone</div>
+                                    <div class="text-gray-600">+91 98765 43210</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-blue-600">📍</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">Location</div>
+                                    <div class="text-gray-600">Online & In-Person Sessions Available</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h4 class="font-medium text-gray-900 mb-4">Follow Our Journey</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                    <span class="text-sm">f</span>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
+                                    <span class="text-sm">t</span>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
+                                    <span class="text-sm">i</span>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors">
+                                    <span class="text-sm">y</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">Dr. Nidheesh</div>
+                    <p class="text-blue-200 leading-relaxed">Transforming lives through quantum healing, holistic medicine, and consciousness expansion.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#hew-therapy" class="hover:text-white transition-colors">HEW Therapy</a></li>
+                        <li><a href="#consultation" class="hover:text-white transition-colors">Homeopathic Consultation</a></li>
+                        <li><a href="#quantum" class="hover:text-white transition-colors">Quantum Healing</a></li>
+                        <li><a href="#learn" class="hover:text-white transition-colors">Coaching Programs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Learn</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#learn" class="hover:text-white transition-colors">Public Courses</a></li>
+                        <li><a href="#learn" class="hover:text-white transition-colors">Business Coaching</a></li>
+                        <li><a href="https://homoeoschool.in" class="hover:text-white transition-colors">Homoeoschool.in</a></li>
+                        <li><a href="#learn" class="hover:text-white transition-colors">1-1 Coaching</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li>hello@drnidheesh.com</li>
+                        <li>+91 98765 43210</li>
+                        <li>Online Sessions Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+                <p>&copy; 2024 Dr. Nidheesh. All rights reserved. | Healing • Transformation • Consciousness</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <h3 id="modal-title" class="text-2xl font-bold text-blue-900 mb-6">Book Your Session</h3>
+            
+            <form onsubmit="submitBooking(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                    <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+                    <input type="date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your healing goals..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors">
+                    Book Session
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Booking modal functions
+        function openBookingModal(service) {
+            document.getElementById('modal-title').textContent = `Book ${service}`;
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form submissions (Demo functionality)
+        function submitContactForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! Dr. Nidheesh will connect with you within 24 hours to begin your healing journey.');
+            event.target.reset();
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+            alert('Your session has been requested! You will receive a confirmation email with payment details and session information within 2 hours.');
+            closeBookingModal();
+            event.target.reset();
+        }
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('booking-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'booking-modal') {
+                closeBookingModal();
+            }
+        });
+
+        // Testimonial slider auto-scroll
+        let testimonialIndex = 0;
+        const testimonialSlider = document.querySelector('.testimonial-slider > div');
+        
+        function autoScrollTestimonials() {
+            if (testimonialSlider) {
+                const cardWidth = 320; // 80 * 4 (w-80 + gap)
+                testimonialIndex = (testimonialIndex + 1) % 3;
+                testimonialSlider.style.transform = `translateX(-${testimonialIndex * cardWidth}px)`;
+            }
+        }
+
+        // Auto-scroll testimonials every 5 seconds
+        setInterval(autoScrollTestimonials, 5000);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95a658e480daff66',t:'MTc1MTcxMzEwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
